@@ -1,0 +1,531 @@
+{
+  "info": {
+    "_postman_id": "a8f01308-0008-4008-8008-000000000008",
+    "name": "Ada Segurança — Aula 08 (Projeto Final: API de Incidents / Chamados)",
+    "description": "Coleção Postman para testar todos os casos de uso (UC1 a UC6) e regras de segurança do módulo `aula08` (`com.ada.chamados:ada-api-incident`).\n\nNota: O `application.yml` define `server.servlet.context-path: /api`, portanto a variável `{{baseUrl}}` já aponta para `http://localhost:8080/api`.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080/api",
+      "type": "string"
+    },
+    {
+      "key": "tokenAna",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "tokenCarlos",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "incidentIdAna",
+      "value": "1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Parte 1 — UC1 & UC2: Cadastro de Usuário e Autenticação JWT",
+      "item": [
+        {
+          "name": "1.1 UC1: Cadastrar Ana (POST /api/user)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ana Souza\",\n  \"username\": \"ana\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["user"]
+            },
+            "description": "Cadastra a usuária Ana com senha criptografada via BCrypt. A resposta retorna apenas id, name e username (sem password/hash)."
+          }
+        },
+        {
+          "name": "1.2 UC1: Cadastrar Carlos (POST /api/user)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Carlos Lima\",\n  \"username\": \"carlos\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["user"]
+            },
+            "description": "Cadastra o segundo usuário (Carlos) para testarmos a regra de propriedade entre usuários distintos."
+          }
+        },
+        {
+          "name": "1.3 UC1 (Erro): Cadastrar Username Duplicado -> 409 Conflict",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Outra Ana\",\n  \"username\": \"ana\",\n  \"password\": \"outrasenha123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["user"]
+            },
+            "description": "Dispara UserAlreadyExistException -> 409 Conflict no formato ErrorResponse."
+          }
+        },
+        {
+          "name": "1.4 UC1 (Erro): Cadastro com Campos em Branco (@Valid) -> 400 Bad Request",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"\",\n  \"username\": \"\",\n  \"password\": \"\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/user",
+              "host": ["{{baseUrl}}"],
+              "path": ["user"]
+            }
+          }
+        },
+        {
+          "name": "1.5 UC2: Autenticar Ana (POST /api/authenticate) -> Salva {{tokenAna}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    const json = pm.response.json();",
+                  "    pm.collectionVariables.set('tokenAna', json.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"ana\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/authenticate",
+              "host": ["{{baseUrl}}"],
+              "path": ["authenticate"]
+            },
+            "description": "Autentica a Ana e salva o JWT gerado automaticamente na variável {{tokenAna}} da coleção."
+          }
+        },
+        {
+          "name": "1.6 UC2: Autenticar Carlos (POST /api/authenticate) -> Salva {{tokenCarlos}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    const json = pm.response.json();",
+                  "    pm.collectionVariables.set('tokenCarlos', json.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"carlos\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/authenticate",
+              "host": ["{{baseUrl}}"],
+              "path": ["authenticate"]
+            },
+            "description": "Autentica o Carlos e salva o JWT gerado automaticamente na variável {{tokenCarlos}} da coleção."
+          }
+        },
+        {
+          "name": "1.7 UC2 (Erro): Senha Errada -> 401 Unauthorized ('Invalid credentials')",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"ana\",\n  \"password\": \"wrong-password\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/authenticate",
+              "host": ["{{baseUrl}}"],
+              "path": ["authenticate"]
+            }
+          }
+        },
+        {
+          "name": "1.8 UC2 (Erro): Usuário Inexistente -> 401 Unauthorized (Mesma mensagem anti-enumeração)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"ghost_user\",\n  \"password\": \"any-password\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/authenticate",
+              "host": ["{{baseUrl}}"],
+              "path": ["authenticate"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Parte 2 — UC3 a UC6: Incidents, Filtros, Transições de Status e Regra de Propriedade",
+      "item": [
+        {
+          "name": "2.1 Rota Protegida SEM Token (GET /api/incidents) -> 401 Unauthorized (customEntryPoint)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/incidents",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents"]
+            },
+            "description": "Barrada diretamente na SecurityFilterChain pelo customEntryPoint() antes de chegar ao Controller."
+          }
+        },
+        {
+          "name": "2.2 UC3: Ana Abre Incident #1 (POST /api/incidents) -> Salva {{incidentIdAna}}",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200 || pm.response.code === 201) {",
+                  "    const json = pm.response.json();",
+                  "    if (json && json.id) {",
+                  "        pm.collectionVariables.set('incidentIdAna', String(json.id));",
+                  "    }",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Printer on 2nd floor not working\",\n  \"description\": \"Paper jam error on screen even with tray full.\",\n  \"priority\": \"HIGH\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents"]
+            },
+            "description": "Cria um incident com status inicial OPEN vinculado à usuária Ana (extraída do subject do JWT)."
+          }
+        },
+        {
+          "name": "2.3 UC3: Ana Abre Incident #2 (POST /api/incidents)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"VPN connection drops frequently\",\n  \"description\": \"Disconnects every 10 minutes when accessing staging DB.\",\n  \"priority\": \"MEDIUM\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents"]
+            }
+          }
+        },
+        {
+          "name": "2.4 UC4: Ana Lista Todos os Seus Incidents (GET /api/incidents)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/incidents",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents"]
+            },
+            "description": "Lista todos os incidents pertencentes à Ana (com status e title nulos)."
+          }
+        },
+        {
+          "name": "2.5 UC4: Ana Filtra por Status e Parte do Título (GET /api/incidents?status=OPEN&title=printer)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/incidents?status=OPEN&title=printer",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "OPEN"
+                },
+                {
+                  "key": "title",
+                  "value": "printer"
+                }
+              ]
+            },
+            "description": "Testa a consulta JPQL parametrizada com LIKE e filtro por status."
+          }
+        },
+        {
+          "name": "2.6 UC5: Ana Consulta Próprio Incident por ID (GET /api/incidents/{{incidentIdAna}}) -> 200 OK",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}"]
+            }
+          }
+        },
+        {
+          "name": "2.7 UC5 (REGRA DE PROPRIEDADE): Carlos Tenta Ler Incident da Ana -> 404 Not Found!",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenCarlos}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}"]
+            },
+            "description": "Carlos envia um token válido, mas o incident pertence à Ana. A API retorna 404 Not Found (mesma resposta de um ID inexistente) para não vazar que o registro existe."
+          }
+        },
+        {
+          "name": "2.8 UC6 (REGRA DE PROPRIEDADE): Carlos Tenta Mudar Status do Incident da Ana -> 404 Not Found!",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenCarlos}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"CLOSED\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}", "status"]
+            }
+          }
+        },
+        {
+          "name": "2.9 UC6: Ana Atualiza Status para IN_PROGRESS (PATCH /api/incidents/{{incidentIdAna}}/status) -> 200 OK",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"IN_PROGRESS\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}", "status"]
+            }
+          }
+        },
+        {
+          "name": "2.10 UC6 (Erro de Transição): Ana Tenta Voltar de IN_PROGRESS para OPEN -> 400 Bad Request",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"OPEN\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}", "status"]
+            },
+            "description": "Dispara StatusChangeException ('Cannot change status from IN_PROGRESS to OPEN.') -> 400 Bad Request."
+          }
+        },
+        {
+          "name": "2.11 UC6: Ana Fecha o Incident (PATCH /api/incidents/{{incidentIdAna}}/status -> CLOSED) -> 200 OK",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"CLOSED\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}", "status"]
+            }
+          }
+        },
+        {
+          "name": "2.12 UC6 (Erro de Transição): Ana Tenta Reabrir Incident CLOSED -> 400 Bad Request",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tokenAna}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"OPEN\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/incidents/{{incidentIdAna}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["incidents", "{{incidentIdAna}}", "status"]
+            },
+            "description": "Dispara StatusChangeException ('Cannot change status of a closed incident.') -> 400 Bad Request."
+          }
+        }
+      ]
+    }
+  ]
+}

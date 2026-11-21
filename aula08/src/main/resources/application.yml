@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+app:
+    jwt:
+        # Em produção, vem OBRIGATORIAMENTE da variável de ambiente JWT_SECRET (sem valor padrão no código!).
+        # Para o algoritmo HS256 (HMAC-SHA256), a chave precisa ter pelo menos 32 bytes (256 bits).
+        secret: ${JWT_SECRET:segredo-super-secreto-da-aula-08-com-mais-de-32-bytes!}

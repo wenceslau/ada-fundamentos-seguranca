@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfc2a640-2a3f-40e5-afb2-48e8a0415c4f" name="Changes" comment="" />
+    <list default="true" id="cfc2a640-2a3f-40e5-afb2-48e8a0415c4f" name="Changes" comment="feature: aula 07">
+      <change afterPath="$PROJECT_DIR$/aula08/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aula05/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula06/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aula06/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula07/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aula07/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
@@ -22,73 +36,95 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Exception" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wenceslau&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wenceslau/ada-fundamentos-seguranca.git&quot;,
+    &quot;accountId&quot;: &quot;60139e84-a194-4d6e-9095-9e2ed7b668c2&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.711279075135225" />
-      <entry key="MS500" value="2.6097287502228883" />
-      <entry key="S2" value="2.8934125603510816" />
-      <entry key="S5" value="2.9565855964543735" />
-      <entry key="S10" value="2.9784700266717135" />
-      <entry key="S30" value="3.2144256616459304" />
-      <entry key="S60" value="4.565808379485436" />
-      <entry key="M2" value="7.771149184521854" />
-      <entry key="M5" value="12.79316438886531" />
-      <entry key="M10" value="16.68355083733976" />
-      <entry key="M15" value="20.779009199802577" />
-      <entry key="M30" value="34.86894079824029" />
-      <entry key="H1" value="55.77981944895137" />
-      <entry key="H2" value="75.28490515828983" />
-      <entry key="H4" value="88.8770178979045" />
-      <entry key="D1" value="102.86177706903071" />
-      <entry key="W1" value="105.5441384239128" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000006763354121" />
+      <entry key="S2" value="1.0409780410937037" />
+      <entry key="S5" value="1.414316147126633" />
+      <entry key="S10" value="1.9073280710760887" />
+      <entry key="S30" value="2.715132068521502" />
+      <entry key="S60" value="4.653031714492361" />
+      <entry key="M2" value="9.611670053290723" />
+      <entry key="M5" value="18.376142926866667" />
+      <entry key="M10" value="24.557824495052" />
+      <entry key="M15" value="27.627680205296414" />
+      <entry key="M30" value="31.614362805754876" />
+      <entry key="H1" value="34.09216209356398" />
+      <entry key="H2" value="35.48619627328051" />
+      <entry key="H4" value="36.32568830020299" />
+      <entry key="D1" value="126.25631483779432" />
+      <entry key="W1" value="376.2119021812941" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="5.164279511127529E-159" />
-      <entry key="S2" value="2.680726052233708E-40" />
-      <entry key="S5" value="1.4835458533037933E-16" />
-      <entry key="S10" value="1.218008970945531E-8" />
-      <entry key="S30" value="0.0023008245127994612" />
-      <entry key="S60" value="0.04796691060318146" />
-      <entry key="M2" value="0.2190143779627418" />
-      <entry key="M5" value="0.5597085179216245" />
-      <entry key="M10" value="1.19055724093511" />
-      <entry key="M15" value="2.2780077981630527" />
-      <entry key="M30" value="5.77282713460913" />
-      <entry key="H1" value="9.984836668381249" />
-      <entry key="H2" value="13.34389796227109" />
-      <entry key="H4" value="15.480836435329508" />
-      <entry key="D1" value="17.550685474251203" />
-      <entry key="W1" value="17.935049429918937" />
+      <entry key="MS500" value="2.7170423781745643E-222" />
+      <entry key="S2" value="4.086779275676815E-56" />
+      <entry key="S5" value="8.085842939080444E-23" />
+      <entry key="S10" value="1.3707538639175419E-11" />
+      <entry key="S30" value="6.222301294277813E-4" />
+      <entry key="S60" value="0.054999567032347" />
+      <entry key="M2" value="0.5415514162005051" />
+      <entry key="M5" value="3.0313341039993533" />
+      <entry key="M10" value="7.044373732117085" />
+      <entry key="M15" value="9.762449312218134" />
+      <entry key="M30" value="13.831093545657003" />
+      <entry key="H1" value="16.591624140056624" />
+      <entry key="H2" value="18.205562610390402" />
+      <entry key="H4" value="19.161548396133465" />
+      <entry key="D1" value="89.86869970346179" />
+      <entry key="W1" value="250.66809684816985" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.671249409008038" />
-      <entry key="MS500" value="2.596676974846736" />
-      <entry key="S2" value="2.8897503712980126" />
-      <entry key="S5" value="2.9550851339188053" />
-      <entry key="S10" value="2.9777134375779677" />
-      <entry key="S30" value="3.216299504714024" />
-      <entry key="S60" value="4.61239061229464" />
-      <entry key="M2" value="7.987442456587125" />
-      <entry key="M5" value="13.350163908101997" />
-      <entry key="M10" value="17.870472423588918" />
-      <entry key="M15" value="23.05149520452192" />
-      <entry key="M30" value="40.633660943132035" />
-      <entry key="H1" value="65.75721062435353" />
-      <entry key="H2" value="88.6236819238553" />
-      <entry key="H4" value="104.35483997025435" />
-      <entry key="D1" value="120.41188589024621" />
-      <entry key="W1" value="123.47910349002446" />
+      <entry key="MS100" value="0.3298769776932235" />
+      <entry key="MS500" value="0.8010703011153268" />
+      <entry key="S2" value="0.9834089474509583" />
+      <entry key="S5" value="1.3788367006186724" />
+      <entry key="S10" value="1.8819530518451915" />
+      <entry key="S30" value="2.701976377215124" />
+      <entry key="S60" value="4.687183764906066" />
+      <entry key="M2" value="10.118446369139559" />
+      <entry key="M5" value="21.369106700517236" />
+      <entry key="M10" value="31.569614425609636" />
+      <entry key="M15" value="37.36287470040197" />
+      <entry key="M30" value="45.42779947303417" />
+      <entry key="H1" value="50.6736063620872" />
+      <entry key="H2" value="53.68627512410818" />
+      <entry key="H4" value="55.48437126060946" />
+      <entry key="D1" value="216.12214204726197" />
+      <entry key="W1" value="626.8788086704541" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2,
@@ -122,60 +158,63 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.All in ada-criptografia (1).executor": "Run",
-    "JUnit.All in ada-criptografia.executor": "Run",
-    "JUnit.All in ada-jwt (1).executor": "Run",
-    "JUnit.All in ada-jwt.executor": "Run",
-    "JUnit.All in ada-oauth (1).executor": "Run",
-    "JUnit.All in ada-oauth.executor": "Run",
-    "JUnit.All in ada-sso-escola.executor": "Run",
-    "JUnit.Aula04Test.executor": "Run",
-    "Maven.ada-criptografia [clean,install...].executor": "Run",
-    "Maven.ada-fundamentos-seguranca [clean,install...].executor": "Run",
-    "Maven.ada-fundamentos-seguranca-students [clean...].executor": "Run",
-    "Maven.ada-jwt [clean,install,-DskipTests].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.ApiAlunosApplication.executor": "Debug",
-    "Spring Boot.Main (1).executor": "Debug",
-    "Spring Boot.Main.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "copilot.chat.legacySessionMetadata.migrated": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Work/development/github/teacher/ada-application-security/ada-fundamentos-seguranca-students/.docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Work/development/github/teacher/ada-application-security/ada-fundamentos-seguranca/ada-oauth/src/main/java/com/ada/oauth/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in ada-criptografia (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in ada-criptografia.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in ada-jwt (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in ada-jwt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in ada-oauth (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in ada-oauth.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in ada-sso-escola.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Aula04Test.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ada-criptografia [clean,install...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ada-fundamentos-seguranca [clean,install...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ada-fundamentos-seguranca-students [clean...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ada-jwt [clean,install,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiAlunosApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.Main (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.Main (3).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Main.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Work/development/github/teacher/ada-application-security/ada-fundamentos-seguranca-students/.docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Work/development/github/teacher/ada-application-security/ada-fundamentos-seguranca-students/aula08/src/main/java/com/ada/chamados/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca-students\.docs" />
+      <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca-students\.http" />
       <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca\.docs" />
       <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca\.docs\_hagamenon" />
       <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca\ada-criptografia\src\main\resources" />
-      <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca\ada-jwt\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Work\development\github\teacher\ada-application-security\ada-fundamentos-seguranca\.docs" />
@@ -221,13 +260,14 @@
             <map>
               <entry key="Main" value="STOPPED" />
               <entry key="Main (1)" value="STOPPED" />
+              <entry key="Main (3)" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main (1)">
+  <component name="RunManager" selected="Spring Boot.Main (3)">
     <configuration name="All in ada-criptografia (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ada-criptografia" />
       <option name="PACKAGE_NAME" value="" />
@@ -289,6 +329,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ada-vulnerabilidades-excecoes" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ada.seguranca.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ada-spring-security-jwt" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ada.seguranca.aula07.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (5)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ada-api-incident" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ada.incident.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ada-jwt" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ada.jwt.Main" />
@@ -306,10 +367,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in ada-sso-escola" />
+        <item itemvalue="JUnit.All in ada-oauth" />
         <item itemvalue="JUnit.All in ada-oauth (1)" />
         <item itemvalue="JUnit.All in ada-jwt (1)" />
         <item itemvalue="JUnit.All in ada-criptografia (1)" />
-        <item itemvalue="JUnit.All in ada-oauth" />
       </list>
     </recent_temporary>
   </component>
@@ -336,12 +397,85 @@
       <workItem from="1794142385146" duration="131000" />
       <workItem from="1794142527932" duration="17849000" />
       <workItem from="1794232193551" duration="18568000" />
-      <workItem from="1794417312577" duration="1863000" />
+      <workItem from="1794417312577" duration="24943000" />
+      <workItem from="1794653940784" duration="1914000" />
+      <workItem from="1794687072726" duration="308000" />
+      <workItem from="1794687455556" duration="37000" />
+      <workItem from="1794687501318" duration="1978000" />
+      <workItem from="1794851905868" duration="18209000" />
+      <workItem from="1795262187369" duration="203000" />
     </task>
+    <task id="LOCAL-00001" summary="feature: aula 01 e 02">
+      <option name="closed" value="true" />
+      <created>1794420671451</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1794420671451</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feature: aula 03">
+      <option name="closed" value="true" />
+      <created>1794420680831</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1794420680831</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature: aula 04">
+      <option name="closed" value="true" />
+      <created>1794420687063</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1794420687063</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feature: aula 05">
+      <option name="closed" value="true" />
+      <created>1794420698919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1794420698919</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature: aula 06">
+      <option name="closed" value="true" />
+      <created>1794506813648</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1794506813648</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feature: aula 07 material">
+      <option name="closed" value="true" />
+      <created>1794591926604</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1794591926604</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feature: aula 07">
+      <option name="closed" value="true" />
+      <created>1794602598837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1794602598837</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature: aula 01 e 02" />
+    <MESSAGE value="feature: aula 03" />
+    <MESSAGE value="feature: aula 04" />
+    <MESSAGE value="feature: aula 05" />
+    <MESSAGE value="feature: aula 06" />
+    <MESSAGE value="feature: aula 07 material" />
+    <MESSAGE value="feature: aula 07" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: aula 07" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -395,6 +529,26 @@
           <url>file://$PROJECT_DIR$/aula04/src/main/java/com/ada/oauth/OAuthSimuladorService.java</url>
           <line>116</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/aula06/src/main/java/com/ada/seguranca/aluno/AlunoRepository.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/aula06/src/main/java/com/ada/seguranca/exception/GlobalExceptionHandler.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/aula06/src/main/java/com/ada/seguranca/exception/GlobalExceptionHandler.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/aula08/src/main/java/com/ada/incident/Main.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
